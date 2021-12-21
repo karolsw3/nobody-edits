@@ -1,0 +1,39 @@
+{
+  "name": "nobody-edits",
+  "version": "1.0.0",
+  "description": "A rip-off of a very popular (at least in its prime) game.",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc && copyfiles *.html build/",
+    "start": "node build/database.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/karolsw3/nobody-edits.git"
+  },
+  "keywords": [
+    "nobody-edits"
+  ],
+  "author": "Me",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/karolsw3/nobody-edits/issues"
+  },
+  "homepage": "https://github.com/karolsw3/nobody-edits#readme",
+  "dependencies": {
+    "body-parser": "^1.19.1",
+    "copyfiles": "^2.4.1",
+    "express": "^4.17.2",
+    "express-session": "^1.17.2",
+    "http": "^0.0.1-security",
+    "mongoose": "^6.1.2",
+    "passport": "^0.5.2",
+    "passport-local": "^1.0.0",
+    "socket.io": "^4.4.0",
+    "validator": "^13.7.0"
+  },
+  "devDependencies": {
+    "typescript": "^4.5.4"
+  }
+}
