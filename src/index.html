@@ -1,0 +1,96 @@
+<html>
+	<head>
+		<title>Nobody Edits</title>
+		<link href="css/index.css" rel="stylesheet">
+	</head>
+	<body
+		class="bg-black w-screen h-screen"
+	>
+		<div
+			id="app"
+			class="w-full h-full flex items-center justify-center"
+		>
+			<div
+				id="nobody-edits"
+				class="relative border border-gray-800"
+			>
+				<div
+					class="
+						w-full absolute z-20 top-0 left-0 bg-gray-800
+						border-b border-gray-600 flex items-center p-4
+						justify-between
+					"
+				>
+					<div
+						v-if="openTab === 'login'"
+					>
+						<input
+							type="text"
+							placeholder="Name"
+							v-model="loginUsername"
+						>
+						<input
+							type="password"
+							placeholder="Password"
+							v-model="loginPassword"
+						>
+						<button
+							@click="login"
+							class="underline text-red-500"
+						>
+							Login
+						</button>
+					</div>
+					<div
+						v-else-if="openTab === 'register'"
+					>
+						<input
+							type="text"
+							placeholder="Name"
+							v-model="registerUsername"
+						>
+						<input
+							type="password"
+							placeholder="Password"
+							v-model="registerPassword"
+						>
+						<input
+							type="password"
+							placeholder="Repeat password"
+							v-model="registerPasswordRepeat"
+						>
+						<button
+							@click="register"
+							class="underline text-red-500"
+						>
+							Register
+						</button>
+					</div>
+					<div
+						v-else
+					>
+						<p
+							class="text-sm text-red-100 font-semibold"
+						>
+							Hello, stranger! Please log in to access the game.
+						</p>
+					</div>
+					<div>
+						<button
+							@click="openTab = 'login'"
+							class="underline text-white"
+						>
+							Login
+						</button>
+						<button
+							@click="openTab = 'register'"
+							class="ml-2 underline text-white"
+						>
+							Register
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

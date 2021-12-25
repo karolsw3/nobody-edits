@@ -4,8 +4,8 @@
   "description": "A rip-off of a very popular (at least in its prime) game.",
   "main": "index.js",
   "scripts": {
-    "build": "tsc && copyfiles *.html build/",
-    "start": "node build/database.js",
+    "build": "rm -rf dist && webpack --mode development --config webpack/server.js && webpack --mode development --config webpack/client.js",
+    "start": "node dist/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -22,18 +22,46 @@
   },
   "homepage": "https://github.com/karolsw3/nobody-edits#readme",
   "dependencies": {
+    "axios": "^0.24.0",
     "body-parser": "^1.19.1",
     "copyfiles": "^2.4.1",
+    "cors": "^2.8.5",
     "express": "^4.17.2",
     "express-session": "^1.17.2",
     "http": "^0.0.1-security",
     "mongoose": "^6.1.2",
     "passport": "^0.5.2",
     "passport-local": "^1.0.0",
+    "phaser": "^3.55.2",
+    "postcss-loader": "^6.2.1",
     "socket.io": "^4.4.0",
-    "validator": "^13.7.0"
+    "socket.io-client": "^4.4.0",
+    "style-loader": "^3.3.1",
+    "validator": "^13.7.0",
+    "vue": "^2.6.14"
   },
   "devDependencies": {
-    "typescript": "^4.5.4"
+    "@babel/core": "^7.16.5",
+    "@babel/preset-env": "^7.16.5",
+    "@types/socket.io-client": "^3.0.0",
+    "autoprefixer": "^10.4.0",
+    "babel-loader": "^8.2.3",
+    "clean-webpack-plugin": "^4.0.0",
+    "css-loader": "^6.5.1",
+    "file-loader": "^6.2.0",
+    "html-loader": "^3.0.1",
+    "html-webpack-plugin": "^5.5.0",
+    "postcss": "^8.4.5",
+    "postcss-preset-env": "^7.1.0",
+    "raw-loader": "^4.0.2",
+    "tailwindcss": "^3.0.7",
+    "terser-webpack-plugin": "^5.3.0",
+    "ts-loader": "^9.2.6",
+    "typescript": "^4.5.4",
+    "webpack": "^5.65.0",
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.7.1",
+    "webpack-merge": "^5.8.0",
+    "webpack-node-externals": "^3.0.0"
   }
 }

@@ -2,7 +2,7 @@ import { model, Schema } from 'mongoose'
 
 const UserSchema = new Schema({
 	_id: String,
-	name: {
+	username: {
 		type: String,
 		required: true
 	},
@@ -18,7 +18,7 @@ const UserSchema = new Schema({
 
 export interface User {
 	_id: string;
-	name: string;
+	username: string;
 	email?: string;
 	password: string;
 }
